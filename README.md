@@ -1,6 +1,6 @@
 # Visual Studio Code Deno extension
 
-Heavily Inspired on [Official Deno Visual Studio Code Extension] (https://github.com/denoland/vscode_deno)
+Heavily Inspired on [Official Deno Visual Studio Code Extension](https://github.com/denoland/vscode_deno)
 
 ## Usage
 
