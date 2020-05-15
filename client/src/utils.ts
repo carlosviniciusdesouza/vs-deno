@@ -93,7 +93,6 @@ export function normalizeFilepath(filepath: string): string {
   );
 }
 
-// TODO: duplicate
 export function getDenoDir(): string {
   // ref https://deno.land/manual.html
   // On Linux/Redox: $XDG_CACHE_HOME/deno or $HOME/.cache/deno
@@ -219,10 +218,6 @@ function constructArgs(ctx: vscode.ExtensionContext, debug: boolean): string[] {
   if (importmap) {
     args.push("--importmap", ctx.asAbsolutePath(importmap));
   }
-
-  // TODO: try to load a ts consistent with the built-in version of Deno.
-  // use use the specified `bundled` as fallback if none is provided
-  // const tsdk: string|null = config.get('typescript.tsdk', null);
   args.push("--tsdk", ctx.extensionPath);
   return args;
 }
@@ -278,5 +273,4 @@ export async function restartTsServer(): Promise<void> {
   vscode.commands.executeCommand("typescript.restartTsServer");
 }
 
-// TODO: download lib.deno.d.ts
 export function downloadLibDenoDts(): void {}

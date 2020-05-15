@@ -1,5 +1,5 @@
 {
-  "name": "vscode_deno",
+  "name": "vs-deno",
   "displayName": "%deno.displayName%",
   "description": "%deno.description%",
   "version": "1.24.0",

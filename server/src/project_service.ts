@@ -123,7 +123,6 @@ export class ProjectService {
   getDefaultProjectForScriptInfo(
     scriptInfo: ts.server.ScriptInfo,
   ): ts.server.Project | undefined {
-    // TODO: If in Deno path, set ScriptInfo to ts.
     return this.tsProjSvc.getDefaultProjectForFile(scriptInfo.fileName, false);
   }
 

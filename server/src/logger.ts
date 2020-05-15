@@ -57,10 +57,6 @@ export function createLogger(options: LoggerOptions): Logger {
   return new Logger(traceToConsole, logLevel, options.logFile);
 }
 
-// TODO: Code below is from TypeScript's repository. Maybe create our own
-// implementation.
-// https://github.com/microsoft/TypeScript/blob/ec39d412876d0dcf704fc886d5036cb625220d2f/src/tsserver/server.ts#L120
-
 function noop(_?: {} | null | undefined): void {} // tslint:disable-line no-empty
 
 function nowString() {
@@ -161,7 +157,7 @@ export class Logger implements ts.server.Logger {
     if (this.fd >= 0) {
       const buf = Buffer.from(s);
       // tslint:disable-next-line no-null-keyword
-      fs.writeSync(this.fd, buf, 0, buf.length, /*position*/ null!); // TODO: GH#18217
+      fs.writeSync(this.fd, buf, 0, buf.length, /*position*/ null!); 
     }
     if (this.traceToConsole) {
       console.warn(s);
