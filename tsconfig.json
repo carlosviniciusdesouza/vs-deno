@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "outDir": "out",
+    "lib": ["es2017"],
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+  },
+  "files": [],
+  "references": [
+    { "path": "./client" },
+    { "path": "./server" }
+  ]
+}
